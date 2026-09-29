@@ -1,5 +1,4 @@
-// Copyright (C) 2024–2026 Aiko Hanasaki
-// SPDX-License-Identifier: AGPL-3.0-only
+
 
 import { getEffectivePrompt, getCurrentApiInfo, normalizeCompletionSource, estimateTokens, isStmbStopError, StmbCancelledError, normalizeAdditionalContextEntries } from './utils.js';
 import { characters, this_chid, substituteParams, getRequestHeaders } from '../../../../script.js';

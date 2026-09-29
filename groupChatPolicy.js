@@ -1,5 +1,4 @@
-// Copyright (C) 2024–2026 Aiko Hanasaki
-// SPDX-License-Identifier: AGPL-3.0-only
+
 
 /** Capture once on an operation's context; queued work keeps its original policy. */
 export function getGroupChatPolicy(moduleSettings = {}, context = {}) {

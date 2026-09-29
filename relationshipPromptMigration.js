@@ -1,5 +1,4 @@
-// Copyright (C) 2024–2026 Aiko Hanasaki
-// SPDX-License-Identifier: AGPL-3.0-only
+
 // Local modification: migrate only recognized legacy Status instructions.
 import { RELATIONSHIP_DEFAULTS } from './relationshipPromptDefaults.js';
 import { LEGACY_STATUS_SIGNATURES } from './relationshipPromptLegacy.js';

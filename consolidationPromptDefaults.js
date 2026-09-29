@@ -1,5 +1,4 @@
-// Copyright (C) 2024–2026 Aiko Hanasaki
-// SPDX-License-Identifier: AGPL-3.0-only
+
 
 export const DEFAULT_CONSOLIDATION_KEYWORD_PROMPT = `Based on this {{stmbtier}} summary, generate 15–30 standalone topical keywords that function as retrieval tags, not micro-summaries.
 Keywords must be:

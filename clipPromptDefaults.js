@@ -1,5 +1,4 @@
-// Copyright (C) 2024–2026 Aiko Hanasaki
-// SPDX-License-Identifier: AGPL-3.0-only
+
 
 export const DEFAULT_COMPACTION_PROMPT_TEMPLATE = `Please aggressively make this lorebook entry more token-efficient while retaining as much useful information as possible.
 

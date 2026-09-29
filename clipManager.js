@@ -1,5 +1,4 @@
-// Copyright (C) 2024–2026 Aiko Hanasaki
-// SPDX-License-Identifier: AGPL-3.0-only
+
 
 import { Popup, POPUP_RESULT, POPUP_TYPE } from '../../../popup.js';
 import { chat, chat_metadata, saveSettingsDebounced } from '../../../../script.js';

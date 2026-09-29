@@ -1,5 +1,4 @@
-// Copyright (C) 2024–2026 Aiko Hanasaki
-// SPDX-License-Identifier: AGPL-3.0-only
+
 
 export const MANUAL_GROUP_MEMORY_ROLE_KEY = 'STMB_memoryRole';
 

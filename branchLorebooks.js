@@ -1,5 +1,4 @@
-// Copyright (C) 2024–2026 Aiko Hanasaki
-// SPDX-License-Identifier: AGPL-3.0-only
+
 
 export const BRANCH_LOREBOOK_METADATA_KEY = 'branchLorebookCopies';
 export const BRANCH_LOREBOOK_METADATA_VERSION = 1;

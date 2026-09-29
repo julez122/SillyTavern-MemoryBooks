@@ -1,5 +1,4 @@
-// Copyright (C) 2024–2026 Aiko Hanasaki
-// SPDX-License-Identifier: AGPL-3.0-only
+
 // Local modification: evidence-based Status reports without relationship scores.
 
 const ENGLISH_PROMPT = `Summarize the relationship between {{user}} and {{char}} using only the supplied scenes and established context. Describe its actual nature, each participant's perspective, trust or distrust, cooperation or conflict, boundaries, communication, shared or conflicting goals, and meaningful changes.

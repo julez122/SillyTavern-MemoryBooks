@@ -1,0 +1,63 @@
+{
+  "date": "2026-09-22",
+  "environment": {
+    "sillyTavern": "1.19.0 julia-custom, commit 347745d02",
+    "extensionBaseline": "09f4efd",
+    "browser": "Chrome desktop; profile controls also checked at 390x844",
+    "provider": "OpenRouter",
+    "model": "google/gemma-4-31b-it"
+  },
+  "userReported": {
+    "flow": "Select message markers, auto-create lorebook, Edit & Save summary and Side Prompt previews",
+    "symptoms": "Lorebook appeared empty and chat assignment indicator remained unset",
+    "afterPageRefresh": "User confirmed both entries and chat assignment appeared",
+    "refreshEditorEnabled": true,
+    "phoneProfileControls": "Custom profile fields and deletion were temporarily unresponsive; user later confirmed recovery without refreshing"
+  },
+  "beforeFixLiveFlow": {
+    "chat": "STMB QA - Preview save repro",
+    "lorebook": "LTM - STMB QA Alex - STMB QA - Preview save repro",
+    "range": [0, 3],
+    "previewEdits": "Changed summary title to Inventory Review - Edited preview",
+    "savedEntryTitles": [
+      "001 - Inventory Review - Edited preview",
+      "Cast of Characters (STMB SidePrompt)",
+      "Assess (STMB SidePrompt)",
+      "Status (STMB SidePrompt)",
+      "Plotpoints (STMB SidePrompt)"
+    ],
+    "diskEntries": 5,
+    "visibleEditorEntriesWithoutPageRefresh": 5,
+    "visibleEditorEntriesAfterPageRefresh": 5,
+    "assignmentSavedInChatMetadata": true,
+    "assignmentIndicatorsUpdated": false,
+    "emptyEditorReproduced": false
+  },
+  "afterFixLiveFlow": {
+    "chat": "STMB QA - Binding indicator check",
+    "lorebook": "LTM - STMB QA Alex - STMB QA - Binding indicator check",
+    "assignmentIndicatorsUpdatedImmediately": [true, true],
+    "summaryPreview": "Generated successfully, then canceled deliberately",
+    "diskEntriesAfterCancel": 0
+  },
+  "profileControlsCheck": {
+    "profile": "STMB QA - Profile controls edited",
+    "createdThroughUi": true,
+    "editNameAndType": true,
+    "presetDropdownSaved": "minimal",
+    "preventRecursionCheckboxSaved": true,
+    "deleteConfirmationOpened": true,
+    "deleteConfirmationDecision": "No",
+    "actualProfileDeletionTested": false,
+    "physicalPhoneTestedByAgent": false,
+    "profileCodeChanged": false
+  },
+  "automatedValidation": {
+    "testsPassed": 219,
+    "testsFailed": 0,
+    "newRegressionFailedBeforeFix": true,
+    "build": "Bun 1.4.2",
+    "syntaxAndWhitespaceChecksPassed": true
+  },
+  "scope": "Only autoCreateLorebook's assignment indicator update changed. Empty-editor and intermittent phone-input causes remain unconfirmed. Original preview setting restored to false; original default profile retained. Synthetic QA data retained. No personal installation data or SillyTavern core files modified."
+}

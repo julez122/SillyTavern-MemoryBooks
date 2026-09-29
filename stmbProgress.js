@@ -1,5 +1,4 @@
-// Copyright (C) 2024–2026 Aiko Hanasaki
-// SPDX-License-Identifier: AGPL-3.0-only
+
 
 import { eventSource, event_types, getRequestHeaders, saveSettings, isChatSaving, isGenerating } from '../../../../script.js';
 import { sha256 } from '../../../../lib.js';

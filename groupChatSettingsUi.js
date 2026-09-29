@@ -1,5 +1,4 @@
-// Copyright (C) 2024–2026 Aiko Hanasaki
-// SPDX-License-Identifier: AGPL-3.0-only
+
 
 // Keep the wrapper interactive so disabled controls still have an accessible reason.
 export function setGroupSettingDisabled(wrapper, disabled, reason) {

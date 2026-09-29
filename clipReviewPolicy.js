@@ -1,5 +1,4 @@
-// Copyright (C) 2024–2026 Aiko Hanasaki
-// SPDX-License-Identifier: AGPL-3.0-only
+
 
 export const CLIP_REVIEW_TEMPLATE_KEY = 'clip-review';
 export const CLIP_REVIEW_ENTRY_TITLE = 'Memory Assistance (STMB SidePrompt)';

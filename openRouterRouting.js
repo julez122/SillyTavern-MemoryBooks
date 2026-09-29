@@ -1,5 +1,4 @@
-// Copyright (C) 2024–2026 Aiko Hanasaki
-// SPDX-License-Identifier: AGPL-3.0-only
+
 
 const OPENROUTER_ROUTING_FIELDS = Object.freeze({
     use_fallback: 'openrouter_use_fallback',

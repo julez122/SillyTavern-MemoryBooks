@@ -1,5 +1,4 @@
-// Copyright (C) 2024–2026 Aiko Hanasaki
-// SPDX-License-Identifier: AGPL-3.0-only
+
 
 export const ROLLBACK_SCOPE_FULL = 'full';
 export const ROLLBACK_SCOPE_AFFECTED = 'affected';
