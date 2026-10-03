@@ -1,5 +1,3 @@
-
-
 # Memory Books: Complete AI Reference Manual
 
 **Product:** SillyTavern Memory Books (STMB)  

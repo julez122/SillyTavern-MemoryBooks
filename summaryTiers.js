@@ -1,5 +1,3 @@
-
-
 export const MIN_SUMMARY_CHILDREN = 1;
 const DEFAULT_MIN_CHILDREN = 5;
 

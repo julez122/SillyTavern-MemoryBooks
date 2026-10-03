@@ -1,5 +1,3 @@
-
-
 export const MANUAL_GROUP_MEMORY_ROLE_KEY = 'STMB_memoryRole';
 
 export function getManualGroupMemoryRole(entry) {

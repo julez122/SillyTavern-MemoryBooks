@@ -1,5 +1,3 @@
-
-
 import { extension_settings } from '../../../extensions.js';
 import { chat, chat_metadata } from '../../../../script.js';
 import { METADATA_KEY } from '../../../world-info.js';

@@ -1,5 +1,3 @@
-
-
 import { fingerprintRegenerationValue } from './memoryRegeneration.js';
 
 export const PENDING_PROGRESS_VERSION = 1;

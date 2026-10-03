@@ -1,5 +1,3 @@
-
-
 import { getRequestHeaders } from '../../../../script.js';
 import { FILE_NAMES, SCHEMA } from './constants.js';
 import { t as __st_t_tag, translate } from '../../../i18n.js';

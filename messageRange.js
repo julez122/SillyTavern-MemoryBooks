@@ -1,5 +1,3 @@
-
-
 import { chat } from '../../../../script.js';
 import { extension_settings } from '../../../extensions.js';
 import { executeSlashCommands } from '../../../slash-commands.js';

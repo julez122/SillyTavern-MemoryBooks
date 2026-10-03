@@ -1,5 +1,3 @@
-
-
 const OPENROUTER_ROUTING_FIELDS = Object.freeze({
     use_fallback: 'openrouter_use_fallback',
     provider: 'openrouter_providers',

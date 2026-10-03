@@ -1,5 +1,3 @@
-
-
 import { Popup, POPUP_TYPE, POPUP_RESULT } from '../../../popup.js';
 import { DOMPurify } from '../../../../lib.js';
 import { escapeHtml } from '../../../utils.js';

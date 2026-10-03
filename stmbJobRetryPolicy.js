@@ -1,5 +1,3 @@
-
-
 const AFTER_MEMORY_JOB_TYPES = new Set(['sidePrompt', 'sidePromptBatch', 'memoryAssistance']);
 
 function cloneValue(value) {

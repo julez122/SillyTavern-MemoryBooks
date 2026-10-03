@@ -1,5 +1,3 @@
-
-
 import { GROUP_CHAT_CONSOLIDATION_PRESET_KEY } from './constants.js';
 
 export function hasGroupAndCharacterConsolidationTopology(items) {

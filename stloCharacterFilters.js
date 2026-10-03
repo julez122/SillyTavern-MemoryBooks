@@ -1,5 +1,3 @@
-
-
 const STLO_KEY = 'stlo';
 
 function isRecord(value) {

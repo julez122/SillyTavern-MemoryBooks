@@ -1,5 +1,3 @@
-
-
 export const ROLLBACK_SCOPE_FULL = 'full';
 export const ROLLBACK_SCOPE_AFFECTED = 'affected';
 

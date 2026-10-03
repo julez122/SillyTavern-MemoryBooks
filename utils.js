@@ -1,5 +1,3 @@
-
-
 import { chat_metadata, characters, eventSource, name2, this_chid } from '../../../../script.js';
 import { getContext, extension_settings } from '../../../extensions.js';
 import { getGroupChatPolicy, isCharacterAwarenessDisabled } from './groupChatPolicy.js';

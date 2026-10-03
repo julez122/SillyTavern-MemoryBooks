@@ -1,5 +1,3 @@
-
-
 import { getCurrentChatId, name1, name2, chat_metadata, saveMetadata } from '../../../../script.js';
 import { createNewWorldInfo, METADATA_KEY, world_names } from '../../../world-info.js';
 import { translate } from '../../../i18n.js';

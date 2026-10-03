@@ -1,4 +1,3 @@
-
 // Run from the repository root after editing relationshipPromptDefaults.js.
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';

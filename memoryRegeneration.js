@@ -1,5 +1,3 @@
-
-
 import { CONSOLIDATION_REGENERATION_PRESET_KEY } from './constants.js';
 
 export const SIDE_PROMPT_REGENERATION_METADATA_KEY = 'STMB_sidePromptRegeneration';

@@ -1,5 +1,3 @@
-
-
 const COPYRIGHT_BANNER = `/*
  * Copyright (C) 2024–2026 Aiko Hanasaki
  * SPDX-License-Identifier: AGPL-3.0-only

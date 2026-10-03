@@ -1,5 +1,3 @@
-
-
 import { getRequestHeaders } from '../../../../script.js';
 import {
   CONSOLIDATION_REGENERATION_PRESET_KEY,

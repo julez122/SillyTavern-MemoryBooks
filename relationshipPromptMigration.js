@@ -1,4 +1,3 @@
-
 // Local modification: migrate only recognized legacy Status instructions.
 import { RELATIONSHIP_DEFAULTS } from './relationshipPromptDefaults.js';
 import { LEGACY_STATUS_SIGNATURES } from './relationshipPromptLegacy.js';

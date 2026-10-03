@@ -1,5 +1,3 @@
-
-
 import { eventSource, event_types, getRequestHeaders, saveSettings, isChatSaving, isGenerating } from '../../../../script.js';
 import { sha256 } from '../../../../lib.js';
 import { extension_settings, getContext } from '../../../extensions.js';

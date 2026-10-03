@@ -1,5 +1,3 @@
-
-
 [Back to README](readme.md)
 
 # 📝 Character Policy for Memory Titles

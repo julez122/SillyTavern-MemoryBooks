@@ -1,4 +1,3 @@
-
 import { readFileSync } from 'node:fs';
 import { SourceTextModule, SyntheticModule, createContext } from 'node:vm';
 import sha256 from 'js-sha256';

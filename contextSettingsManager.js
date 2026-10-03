@@ -1,5 +1,3 @@
-
-
 import { getRequestHeaders } from '../../../../script.js';
 import { translate } from '../../../i18n.js';
 import { loadWorldInfo, world_names } from '../../../world-info.js';

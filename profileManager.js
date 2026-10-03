@@ -1,5 +1,3 @@
-
-
 import { saveSettingsDebounced } from '../../../../script.js';
 import { Popup, POPUP_TYPE, POPUP_RESULT } from '../../../popup.js';
 import { moment, Handlebars, DOMPurify } from '../../../../lib.js';

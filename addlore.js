@@ -1,5 +1,3 @@
-
-
 import { getContext } from '../../../extensions.js';
 import { isCharacterAwarenessDisabled } from './groupChatPolicy.js';
 import {

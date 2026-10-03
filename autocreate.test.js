@@ -1,4 +1,3 @@
-
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { loadExtensionModule, identityTranslate } from './test-support/extension-harness.js';

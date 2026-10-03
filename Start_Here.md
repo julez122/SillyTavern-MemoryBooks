@@ -1,5 +1,3 @@
-
-
 # 📕 Installing and Getting Started with Memory Books
 
 Memory Books turns parts of your SillyTavern chat into organized memory entries that can be recalled later.

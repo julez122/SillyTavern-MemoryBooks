@@ -1,5 +1,3 @@
-
-
 import { translate } from '../../../i18n.js';
 import {
     CONSOLIDATION_REGENERATION_PRESET_KEY,

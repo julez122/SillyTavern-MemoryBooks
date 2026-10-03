@@ -1,5 +1,3 @@
-
-
 import { chat, chat_metadata } from '../../../../script.js';
 import { saveMetadataDebounced, getContext } from '../../../extensions.js';
 import { createSceneRequest, estimateTokenCount, compileScene } from './chatcompile.js';

@@ -1,5 +1,3 @@
-
-
 # 📕 ST Memory Books - Your AI Chat Memory Assistant
 
 **Turn your endless chat conversations into organized, searchable memories!** 

@@ -1,5 +1,3 @@
-
-
 import { Popup, POPUP_RESULT, POPUP_TYPE } from '../../../popup.js';
 import { DOMPurify } from '../../../../lib.js';
 import { extension_settings } from '../../../extensions.js';

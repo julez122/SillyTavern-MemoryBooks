@@ -1,5 +1,3 @@
-
-
 export const CLIP_REVIEW_TEMPLATE_KEY = 'clip-review';
 export const CLIP_REVIEW_ENTRY_TITLE = 'Memory Assistance (STMB SidePrompt)';
 export const LEGACY_CLIP_REVIEW_ENTRY_TITLE = 'Clip Review (STMB SidePrompt)';

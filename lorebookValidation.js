@@ -1,5 +1,3 @@
-
-
 import { chat_metadata } from "../../../../script.js";
 import { extension_settings } from "../../../extensions.js";
 import { Popup, POPUP_TYPE, POPUP_RESULT } from "../../../popup.js";

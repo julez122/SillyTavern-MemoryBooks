@@ -1,5 +1,3 @@
-
-
 export const BRANCH_LOREBOOK_METADATA_KEY = 'branchLorebookCopies';
 export const BRANCH_LOREBOOK_METADATA_VERSION = 1;
 

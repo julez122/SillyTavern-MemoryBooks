@@ -1,5 +1,3 @@
-
-
 /**
  * Localization data for Memory Books extension
  * This file contains translation strings for the UI

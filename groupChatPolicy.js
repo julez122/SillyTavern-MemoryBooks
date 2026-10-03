@@ -1,5 +1,3 @@
-
-
 /** Capture once on an operation's context; queued work keeps its original policy. */
 export function getGroupChatPolicy(moduleSettings = {}, context = {}) {
     moduleSettings ||= {};

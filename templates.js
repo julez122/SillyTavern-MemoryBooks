@@ -1,5 +1,3 @@
-
-
 import { Handlebars } from '../../../../lib.js';
 
 /**

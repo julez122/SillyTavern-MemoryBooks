@@ -1,5 +1,3 @@
-
-
 // Keep the wrapper interactive so disabled controls still have an accessible reason.
 export function setGroupSettingDisabled(wrapper, disabled, reason) {
     if (!wrapper) return;

@@ -1,5 +1,3 @@
-
-
 import { Handlebars } from '../../../../lib.js';
 
 export const summaryPromptsTableTemplate = Handlebars.compile(`

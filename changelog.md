@@ -1,5 +1,3 @@
-
-
 # 📕 Memory Books - Version History
 
 ← [Back to README](readme.md)

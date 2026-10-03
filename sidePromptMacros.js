@@ -1,5 +1,3 @@
-
-
 import { substituteParamsExtended } from '../../../../script.js';
 
 const MACRO_TOKEN_REGEX = /{{[^{}]+}}/g;

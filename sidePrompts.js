@@ -1,5 +1,3 @@
-
-
 import { chat, chat_metadata } from '../../../../script.js';
 import { extension_settings } from '../../../extensions.js';
 import { loadWorldInfo, world_names } from '../../../world-info.js';

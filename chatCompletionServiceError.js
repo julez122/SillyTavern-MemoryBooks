@@ -1,5 +1,3 @@
-
-
 /**
  * Preserve a failed ChatCompletionService attempt on the error from STMB's
  * fallback request and make the first failure visible in ordinary error UIs.

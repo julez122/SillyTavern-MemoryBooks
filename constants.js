@@ -1,5 +1,3 @@
-
-
 /**
  * Constants for STMemoryBooks extension
  */

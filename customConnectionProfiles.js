@@ -1,5 +1,3 @@
-
-
 /**
  * Return whether a SillyTavern Connection Manager profile targets the Custom
  * Chat Completion provider.

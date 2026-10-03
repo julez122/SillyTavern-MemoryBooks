@@ -1,5 +1,3 @@
-
-
 import { usesGroupSidePromptDefault } from './groupChatPolicy.js';
 
 export const SIDE_PROMPT_AFTER_MEMORY_SET_KEY = 'sidePromptAfterMemorySetKey';

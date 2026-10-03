@@ -1,5 +1,3 @@
-
-
 export const DEFAULT_CONSOLIDATION_KEYWORD_PROMPT = `Based on this {{stmbtier}} summary, generate 15–30 standalone topical keywords that function as retrieval tags, not micro-summaries.
 Keywords must be:
 - Concrete and scene-specific (locations, objects, proper nouns, unique actions, repeated motifs).

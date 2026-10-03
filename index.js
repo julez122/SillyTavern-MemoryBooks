@@ -1,5 +1,3 @@
-
-
 import {
   eventSource,
   event_types,

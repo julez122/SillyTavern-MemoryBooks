@@ -1,5 +1,3 @@
-
-
 import { getEffectivePrompt, getCurrentApiInfo, normalizeCompletionSource, estimateTokens, isStmbStopError, StmbCancelledError, normalizeAdditionalContextEntries } from './utils.js';
 import { characters, this_chid, substituteParams, getRequestHeaders } from '../../../../script.js';
 import { getStreamingReply, oai_settings, ZAI_ENDPOINT } from '../../../openai.js';
