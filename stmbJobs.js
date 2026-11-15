@@ -23,7 +23,7 @@ import {
 const MODULE_NAME = 'STMemoryBooks-Jobs';
 const TOP_INFO_BAR_ID = 'extensionTopBar';
 const TOP_INFO_BAR_CHAT_NAME_ID = 'extensionTopBarChatName';
-const TOP_INFO_BAR_EXTENSION_URL = 'https://github.com/SillyTavern/Extension-TopInfoBar';
+const TOP_INFO_BAR_EXTENSION_URL = 'https://github.com/julez122/Extension-TopInfoBar/tree/custom-features';
 const JOB_BUTTON_ROOT_ID = 'stmb-jobs-topbar';
 const JOB_DRAWER_ID = 'top_chat_stmb_jobs';
 const INSTALL_TOP_INFO_BAR_RESULT = POPUP_RESULT.CUSTOM1;
@@ -96,7 +96,7 @@ function showMissingTopInfoBarNotice() {
     missingTopInfoBarNoticeShown = true;
     const noticeText = tr(
         'STMemoryBooks_Jobs_TopInfoBarMissingNotice',
-        'Chat Top Bar is either disabled or not installed.\n\nThe optional Memory Books job queue uses Chat Top Bar to show the Jobs button and queue drawer. Chat Top Bar is an official SillyTavern extension by Cohee1207.\n\nInstall or enable Chat Top Bar to use job queueing. If you do not want to use Chat Top Bar, STMB will still work normally; only the job queue function will be unavailable.\n\nOfficial extension:\nhttps://github.com/SillyTavern/Extension-TopInfoBar',
+        'Chat Top Bar is either disabled or not installed.\n\nThe optional Memory Books job queue uses Chat Top Bar to show the Jobs button and queue drawer. Chat Top Bar is an official SillyTavern extension by Cohee1207.\n\nInstall or enable Chat Top Bar to use job queueing. If you do not want to use Chat Top Bar, STMB will still work normally; only the job queue function will be unavailable.\n\nOfficial extension:\nhttps://github.com/julez122/Extension-TopInfoBar/tree/custom-features',
     );
     const noticeHtml = escapeHtml(noticeText)
         .replace(
