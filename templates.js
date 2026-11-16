@@ -6,7 +6,8 @@ import { Handlebars } from '../../../../lib.js';
 export const settingsTemplate = Handlebars.compile(`
     <h2 data-i18n="STMemoryBooks_Settings" style="font-size: 18px ;margin-bottom: 5px;">📕 Memory Books</h2>
 
-        <details class="stmb-help-drawer info-block hint">
+        <details class="stmb-help-drawer info-block hint" style="margin: auto; width: fit-content;
+border-radius: 5px; padding: 0;">
             <summary>
                 <i class="fa-solid fa-circle-question" aria-hidden="true"></i>
                 <span data-i18n="STMemoryBooks_HelpGuidesSummary">Help &amp; Guides</span>

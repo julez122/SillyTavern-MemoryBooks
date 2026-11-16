@@ -294,6 +294,7 @@
   margin: auto;
   width: fit-content;
   border-radius: 5px;
+  padding: 10px 5px;
 }
 
 .info-block {
@@ -392,7 +393,7 @@ p.stmb-help-drawer-copy {
 }
 
 .stmb-box {
-  border: 1px solid var(--SmartThemeBorderColor);
+  border: 1px dashed var(--SmartThemeBorderColor);
   border-radius: 6px;
   background-color: var(--SmartThemeBotMesBlurTintColor);
   padding-top: 5px;
@@ -903,4 +904,9 @@ p.stmb-help-drawer-copy {
   .stmb-regeneration-columns {
     grid-template-columns: 1fr;
   }
+}
+
+#stmb-profile-chat-completion-service-container {
+    margin-top: 5px;
+    margin-bottom: 15px;
 }

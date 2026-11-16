@@ -106,7 +106,7 @@ const profileEditTemplate = Handlebars.compile(`
 
     <div class="world_entry_form_control marginTop5">
         <h4 data-i18n="STMemoryBooks_ModelAndTempSettings">Model & Temperature Settings:</h4>
-        <div class="info-block hint marginBot10" data-i18n="STMemoryBooks_ModelHint">
+        <div class="info-block hint marginBot10" data-i18n="STMemoryBooks_ModelHint" style="margin: auto; width: fit-content; border-radius: 5px; padding: 5px; margin-block: 5px; font-size: 10px;">
             For model, copy-paste the exact model ID, eg. <code>gemini-2.5-pro</code>, <code>deepseek/deepseek-r1-0528:free</code>, <code>gpt-4o-mini-2024-07-18</code>, etc.
         </div>
 
@@ -157,8 +157,8 @@ const profileEditTemplate = Handlebars.compile(`
             </label>
         </div>
 
-        <div class="info-block hint marginBot10">
-            <small data-i18n="STMemoryBooks_APIProfileConfigHint">💡 Profile Setup Hint: Configure and test connections in SillyTavern first. Custom API profiles can use the active Custom connection or bind a specific Custom connection profile above. Full Manual Configuration is only for exceptional direct-browser connections.</small>
+        <div class="info-block hint marginBot10" style="margin: auto; width: fit-content; border-radius: 5px; padding: 5px; margin-block: 5px; font-size: 12px;">
+            <small data-i18n="STMemoryBooks_APIProfileConfigHint" >💡 Profile Setup Hint: Configure and test connections in SillyTavern first. Custom API profiles can use the active Custom connection or bind a specific Custom connection profile above. Full Manual Configuration is only for exceptional direct-browser connections.</small>
         </div>
 
         <label class="checkbox_label marginTop5">
@@ -218,7 +218,7 @@ const profileEditTemplate = Handlebars.compile(`
     </div>
 
     <div class="world_entry_form_control marginTop5">
-        <label for="stmb-profile-preset">
+        <label for="stmb-profile-preset" style="margin-top: 10px;">
             <h4 data-i18n="STMemoryBooks_Profile_MemoryMethod">Memory Creation Method:</h4>
             <small data-i18n="STMemoryBooks_Profile_PresetSelectDesc">Choose a summary prompt. Edit or create custom prompts in the Summary Prompt Manager to see them in this list.</small>
             <select id="stmb-profile-preset" class="text_pole">
@@ -257,10 +257,10 @@ const profileEditTemplate = Handlebars.compile(`
 
     <div class="world_entry_form_control marginTop5">
         <div class="buttons_block justifyCenter gap10px whitespacenowrap">
-            <div id="stmb-open-prompt-manager" class="menu_button interactable" data-i18n="STMemoryBooks_OpenPromptManager">🧩 Open Summary Prompt Manager</div>
-            <div id="stmb-refresh-presets" class="menu_button interactable" data-i18n="STMemoryBooks_RefreshPresets">🔄 Refresh Presets</div>
+            <div id="stmb-open-prompt-manager" class="menu_button interactable" data-i18n="STMemoryBooks_OpenPromptManager" style="font-size: 12px">🧩 Open Summary Prompt Manager</div>
+            <div id="stmb-refresh-presets" class="menu_button interactable" data-i18n="STMemoryBooks_RefreshPresets" style="font-size: 12px">🔄 Refresh Presets</div>
             {{#if hasLegacyCustomPrompt}}
-            <div id="stmb-move-to-preset" class="menu_button interactable" data-i18n="STMemoryBooks_MoveToPreset">📌 Move Current Custom Prompt to Preset</div>
+            <div id="stmb-move-to-preset" class="menu_button interactable" data-i18n="STMemoryBooks_MoveToPreset" style="font-size: 12px">📌 Move Current Custom Prompt to Preset</div>
             {{/if}}
         </div>
     </div>
@@ -299,7 +299,7 @@ const profileEditTemplate = Handlebars.compile(`
 
     <hr>
     <h4 data-i18n="STMemoryBooks_LorebookEntrySettings">Lorebook Entry Settings</h4>
-    <div class="info-block hint marginBot10" data-i18n="STMemoryBooks_LorebookEntrySettingsDesc">
+    <div class="info-block hint marginBot10" data-i18n="STMemoryBooks_LorebookEntrySettingsDesc" style="margin: auto; width: fit-content; border-radius: 5px; padding: 5px; margin-block: 5px; font-size: 10px;">
         These settings control how the generated memory is saved into the lorebook.
     </div>
 
