@@ -4,7 +4,7 @@ import { Handlebars } from '../../../../lib.js';
  * Main settings template
  */
 export const settingsTemplate = Handlebars.compile(`
-    <h2 data-i18n="STMemoryBooks_Settings">📕 Memory Books</h2>
+    <h2 data-i18n="STMemoryBooks_Settings" style="font-size: 18px ;margin-bottom: 5px;">📕 Memory Books</h2>
 
         <details class="stmb-help-drawer info-block hint">
             <summary>
@@ -16,10 +16,10 @@ export const settingsTemplate = Handlebars.compile(`
                 <a class="menu_button menu_button_icon interactable stmb-help-drawer-link justifyCenter"
                     href="{{aiReferenceManualUrl}}" download="{{aiReferenceManualFilename}}">
                     <i class="fa-solid fa-download" aria-hidden="true"></i>
-                    <span data-i18n="STMemoryBooks_DownloadAIReferenceManual">Download AI Reference Manual (.md)</span>
+                    <span data-i18n="STMemoryBooks_DownloadAIReferenceManual" style="font-size: 10px;">Download AI Reference Manual (.md)</span>
                 </a>
                 <small class="stmb-help-languages">
-                    <a href="https://github.com/aikohanasaki/SillyTavern-MemoryBooks/tree/main/userguides"
+                    <a href="https://github.com/julez122/SillyTavern-MemoryBooks/tree/custom-features/userguides"
                         target="_blank" rel="noopener noreferrer"
                         data-i18n="STMemoryBooks_BrowseGuideLanguages">Browse the guide in other languages</a>
                 </small>
@@ -28,17 +28,17 @@ export const settingsTemplate = Handlebars.compile(`
 
         {{#if hasScene}}
         <div id="stmb-scene" class="padding10 marginBot10">
-            <div class="marginBot5" data-i18n="STMemoryBooks_CurrentScene">Current Scene:</div>
+            <div class="marginBot5" data-i18n="STMemoryBooks_CurrentScene" style="font-size: 14px;font-weight: 600; letter-spacing: 1px; font-family: 'Inconsolata Custom', monospace;">Current Scene:</div>
             <div class="padding10 marginTop5 stmb-box">
-                <pre><code id="stmb-scene-block"><span data-i18n="STMemoryBooks_Start">Start</span>: <span data-i18n="STMemoryBooks_Message">Message</span> #{{sceneData.sceneStart}} ({{sceneData.startSpeaker}})
+                <pre><code id="stmb-scene-block"><span data-i18n="STMemoryBooks_Start" style="font-weight: bold;color: var(--SmartThemeQuoteColor);">Start:</span><span data-i18n="STMemoryBooks_Message">Message</span> #{{sceneData.sceneStart}} ({{sceneData.startSpeaker}})
 {{sceneData.startExcerpt}}
 
-<span data-i18n="STMemoryBooks_End">End</span>: <span data-i18n="STMemoryBooks_Message">Message</span> #{{sceneData.sceneEnd}} ({{sceneData.endSpeaker}})
+<span data-i18n="STMemoryBooks_End" style="font-weight: bold;color: var(--SmartThemeQuoteColor);">End:</span><span data-i18n="STMemoryBooks_Message">Message</span> #{{sceneData.sceneEnd}} ({{sceneData.endSpeaker}})
 {{sceneData.endExcerpt}}
 
-<span data-i18n="STMemoryBooks_Messages">Messages</span>: {{sceneData.messageCount}} | <span data-i18n="STMemoryBooks_EstimatedTokens">Estimated tokens</span>: {{sceneData.estimatedTokens}}</code></pre>
+<span data-i18n="STMemoryBooks_Messages" style="font-weight: bold;color: var(--SmartThemeQuoteColor);">Messages</span>: {{sceneData.messageCount}} | <span data-i18n="STMemoryBooks_EstimatedTokens" style="font-weight: bold;color: var(--SmartThemeQuoteColor);">Estimated tokens</span>: {{sceneData.estimatedTokens}}</code></pre>
                 {{#if sceneData.hasMostlyHiddenMessages}}
-                <small class="warning">⚠️ <span data-i18n="STMemoryBooks_MostlyHiddenSceneWarning">More than 50% of the messages in this scene are hidden. Please ensure that the scene selection is correct.</span></small>
+                <small class="warning" style="font-weight: bold;color: var(--SmartThemeQuoteColor);">⚠️ <span data-i18n="STMemoryBooks_MostlyHiddenSceneWarning">More than 50% of the messages in this scene are hidden. Please ensure that the scene selection is correct.</span></small>
                 {{/if}}
             </div>
         </div>
@@ -57,9 +57,9 @@ export const settingsTemplate = Handlebars.compile(`
         </div>
         {{else}}
         <div id="stmb-memory-status" class="info-block">
-            <span>📊 <span data-i18n="STMemoryBooks_MemoryStatus">Memory Status</span>: <span data-i18n="STMemoryBooks_NoMemoriesProcessed">No memories have been processed for this chat yet</span> <small data-i18n="STMemoryBooks_SinceVersion">(since updating to version 3.6.2 or higher.)</small></span>
+            <span>📊 <span data-i18n="STMemoryBooks_MemoryStatus">Memory Status</span>: <span data-i18n="STMemoryBooks_NoMemoriesProcessed">No memories have been processed for this chat yet</span></span>
             <br />
-            <small data-i18n="STMemoryBooks_AutoSummaryNote">Please note that Auto-Summary requires you to "prime" every chat with at least one manual memory. After that, summaries will be made automatically.</small>
+            <small data-i18n="STMemoryBooks_AutoSummaryNote" style="font-size: 10px; line-height: 1.45; display: block; margin-top: 5px;">Please note that Auto-Summary requires you to "prime" every chat with at least one manual memory. After that, summaries will be made automatically.</small>
         </div>
         {{/if}}
 
@@ -87,7 +87,7 @@ export const settingsTemplate = Handlebars.compile(`
                 </div>
             </div>
 
-            <div id="stmb-automatic-info" class="marginTop5" style="display: {{#if manualModeEnabled}}none{{else}}block{{/if}};">
+            <div id="stmb-automatic-info" class="marginTop5" style="display: {{#if manualModeEnabled}}none{{else}}block{{/if}}; margin-top: 8px !important;">
                 <small class="opacity50p">
                     {{#if chatBoundLorebookName}}
                         <span data-i18n="STMemoryBooks_UsingChatBound">Using chat-bound lorebook</span> "{{chatBoundLorebookName}}"
@@ -98,21 +98,21 @@ export const settingsTemplate = Handlebars.compile(`
             </div>
         </div>
 
-        <div class="world_entry_form_control">
+        <div class="world_entry_form_control" style="border-top: 1px solid var(--SmartThemeBorderColor);padding-top: 15px;margin-block: 10px;">
             <label class="checkbox_label">
                 <input type="checkbox" id="stmb-manual-mode-enabled" {{#if manualModeEnabled}}checked{{/if}} {{#if autoCreateLorebook}}disabled{{/if}}>
                 <span data-i18n="STMemoryBooks_EnableManualMode">Enable Manual Lorebook Mode</span>
             </label>
-            <small class="opacity50p" data-i18n="STMemoryBooks_ManualModeDesc">When enabled, you must specify a lorebook for memories instead of using the one bound to the chat.</small>
+            <small class="opacity50p" data-i18n="STMemoryBooks_ManualModeDesc" style="font-size: 10px;padding-top: 3px;">When enabled, you must specify a lorebook for memories instead of using the one bound to the chat.</small>
         </div>
 
         {{#unless isGroupChat}}
-        <div class="world_entry_form_control">
+        <div class="world_entry_form_control" style="margin-block: 10px">
             <label class="checkbox_label">
                 <input type="checkbox" id="stmb-narrator-mode-enabled" {{#if narratorModeEnabled}}checked{{/if}}>
                 <span data-i18n="STMemoryBooks_NarratorMode">Narrator Mode</span>
             </label>
-            <small class="opacity50p" data-i18n="STMemoryBooks_NarratorModeDesc">Use one omniscient Memory Book plus separate Memory Books for a manually selected cast.</small>
+            <small class="opacity50p" data-i18n="STMemoryBooks_NarratorModeDesc" style="font-size: 10px;padding-top: 3px;">Use one omniscient Memory Book plus separate Memory Books for a manually selected cast.</small>
             <div id="stmb-manage-narrator-cast-container" class="buttons_block marginTop5 justifyCenter gap10px whitespacenowrap {{#unless narratorModeEnabled}}displayNone{{/unless}}">
                 <button type="button" id="stmb-manage-narrator-cast" class="menu_button interactable whitespacenowrap">
                     <i class="fa-solid fa-users"></i>
@@ -123,18 +123,18 @@ export const settingsTemplate = Handlebars.compile(`
         </div>
         {{/unless}}
 
-        <div class="world_entry_form_control">
+        <div class="world_entry_form_control" style="margin-block: 10px;">
             <label class="checkbox_label">
                 <input type="checkbox" id="stmb-auto-create-lorebook" {{#if autoCreateLorebook}}checked{{/if}} {{#if manualModeEnabled}}disabled{{/if}}>
                 <span data-i18n="STMemoryBooks_AutoCreateLorebook">Auto-create lorebook if none exists</span>
             </label>
-            <small class="opacity50p" data-i18n="STMemoryBooks_AutoCreateLorebookDesc">When enabled, automatically creates and binds a lorebook to the chat if none exists.</small>
+            <small class="opacity50p" data-i18n="STMemoryBooks_AutoCreateLorebookDesc" style="font-size: 10px;padding-top: 3px;">When enabled, automatically creates and binds a lorebook to the chat if none exists.</small>
         </div>
 
-        <div class="world_entry_form_control">
-            <label for="stmb-lorebook-name-template">
+        <div class="world_entry_form_control" style="margin-block: 10px;">
+            <label for="stmb-lorebook-name-template" style="margin-top: 15px;">
                 <h4 data-i18n="STMemoryBooks_LorebookNameTemplate">Lorebook Name Template:</h4>
-                <small class="opacity50p" data-i18n="STMemoryBooks_LorebookNameTemplateDesc">Template for auto-created lorebook names. Supports {{char}}, {{user}}, {{chat}} placeholders.</small>
+                <small class="opacity50p" data-i18n="STMemoryBooks_LorebookNameTemplateDesc" style="font-size: 10px; padding: 3px 0 8px; display: block;">Template for auto-created lorebook names. Supports {{char}}, {{user}}, {{chat}} placeholders.</small>
                 <input type="text" id="stmb-lorebook-name-template" class="text_pole"
                     value="{{lorebookNameTemplate}}" data-i18n="[placeholder]STMemoryBooks_LorebookNameTemplatePlaceholder"
                     placeholder="LTM - {{char}} - {{chat}}"
@@ -154,7 +154,7 @@ export const settingsTemplate = Handlebars.compile(`
             </select>
             <input type="text" id="stmb-custom-title-format" class="text_pole marginTop5 {{#unless showCustomInput}}displayNone{{/unless}}"
                 data-i18n="[placeholder]STMemoryBooks_EnterCustomFormat" placeholder="Enter custom format" value="{{titleFormat}}">
-            <small class="opacity50p" data-i18n="STMemoryBooks_TitleFormatDesc">Use [0], [00], [000] for auto-numbering. Available: \{{title}}, \{{scene}}, &#123;&#123;char}}, &#123;&#123;groupname}}, \{{present}}, &#123;&#123;user}}, \{{messages}}, \{{profile}}, &#123;&#123;date}}, &#123;&#123;time}}</small>
+            <small class="opacity50p" data-i18n="STMemoryBooks_TitleFormatDesc" style="font-size: 10px;">Use [0], [00], [000] for auto-numbering. Available: \{{title}}, \{{scene}}, &#123;&#123;char}}, &#123;&#123;groupname}}, \{{present}}, &#123;&#123;user}}, \{{messages}}, \{{profile}}, &#123;&#123;date}}, &#123;&#123;time}}</small>
         </div>
 
         <div class="world_entry_form_control">
@@ -165,7 +165,7 @@ export const settingsTemplate = Handlebars.compile(`
             </select>
         </div>
 
-        <div id="stmb-profile-summary" class="padding10 marginBot10">
+        <div id="stmb-profile-summary" class="padding10 marginBot10" style="font-size: 13px;">
             <div class="marginBot5" data-i18n="STMemoryBooks_ProfileSettings">Profile Settings:</div>
             <div><span data-i18n="STMemoryBooks_Provider">Provider</span>: <span id="stmb-summary-api">{{selectedProfile.connection.api}}</span></div>
             <div><span data-i18n="STMemoryBooks_Model">Model</span>: <span id="stmb-summary-model">{{selectedProfile.connection.model}}</span></div>
@@ -179,7 +179,7 @@ export const settingsTemplate = Handlebars.compile(`
             </details>
         </div>
 
-        <h4 class="stmb-section-title" data-i18n="STMemoryBooks_ProfileActions">Profile Actions:</h4>
+        <h4 class="stmb-section-title" data-i18n="STMemoryBooks_ProfileActions" style="margin-top: 25px !important;">Profile Actions:</h4>
         <div class="buttons_block marginTop5 justifyCenter gap10px whitespacenowrap" id="stmb-profile-buttons">
             <!-- Profile buttons will be dynamically inserted here -->
         </div>
@@ -190,10 +190,9 @@ export const settingsTemplate = Handlebars.compile(`
             <!-- extra function buttons will be dynamically inserted here -->
         </div>
 
-        <h4 class="stmb-section-title" data-i18n="STMemoryBooks_promptManagerButtons">Settings</h4>
+        <h4 class="stmb-section-title" data-i18n="STMemoryBooks_promptManagerButtons" style="margin-bottom: 3px !important; margin-top: 20px !important;">Settings</h4>
 
-        <div class="info-block">
-            <small class="opacity50p" data-i18n="STMemoryBooks_PromptManagerButtonsHint">Use the buttons below to explore customization options.</small>
+        <div class="info-block" style="margin-top: 0; padding-top: 5px;">
             <div class="buttons_block marginTop5 justifyCenter gap10px whitespacenowrap" id="stmb-prompt-manager-buttons">
                 <!-- prompt manager buttons will be dynamically inserted here -->
             </div>

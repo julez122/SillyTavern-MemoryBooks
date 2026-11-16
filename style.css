@@ -4,8 +4,8 @@
 .mes_stmb_start,
 .mes_stmb_end {
   color: var(--SmartThemeBodyColor);
-  background-color: var(--SmartThemeBlurTintColor);
-  border: 1px solid var(--SmartThemeBorderColor);
+  background-color: var(--black60a);
+  border: 0.5px solid var(--SmartThemeBodyColor);
   border-radius: 5px;
   padding: 3px 5px;
   margin: 0 3px;
@@ -25,31 +25,31 @@
 /* --- ACTIVE STATE (ON) --- */
 .mes .mes_stmb_start.on,
 .mes .mes_stmb_end.on {
-  background-color: var(--SmartThemeQuoteColor) !important;
-  color: var(--SmartThemeBlurTintColor) !important;
-  border-color: var(--SmartThemeQuoteColor) !important;
+  background-color: var(--SmartThemeUnderlineColor) !important;
+  color: var(--color-black) !important;
+  border-color: var(--SmartThemeUnderlineColor) !important;
   filter: grayscale(0) !important;
   font-weight: bold;
 }
 
 .mes .mes_stmb_start.on:hover,
 .mes .mes_stmb_end.on:hover {
-  filter: grayscale(0) brightness(1.2) !important;
+  filter: grayscale(0) brightness(1.1) !important;
 }
 
 /* --- VALID SELECTION POINTS --- */
 .mes_stmb_start.valid-start-point,
 .mes_stmb_end.valid-end-point {
-  background-color: #4caf50;
-  color: var(--SmartThemeBlurTintColor);
-  border-color: #4caf50;
+  background-color: #8de2cb;
+  color: var(--color-black);
+  border-color: #8de2cb;
   filter: grayscale(0);
   animation: stmb-pulse 2s infinite;
 }
 
 .mes_stmb_start.valid-start-point:hover,
 .mes_stmb_end.valid-end-point:hover {
-  filter: grayscale(0) brightness(1.2);
+  filter: grayscale(0) brightness(1.1);
   animation: none;
 }
 
@@ -288,14 +288,37 @@
   overflow: hidden;
 }
 
+.info-block.hint {
+  border-color: var(--info-color, #7fb3e8);
+  background-color: rgba(163, 201, 241, 0.2);
+  margin: auto;
+  width: fit-content;
+  border-radius: 5px;
+}
+
+.info-block {
+  padding: 10px 1em;
+  margin: 1em 0;
+  border-radius: 0px;
+  border-left: 3px solid var(--SmartThemeBorderColor);
+  background-color: var(--SmartThemeBlurTintColor);
+  color: var(--SmartThemeBodyColor);
+  backdrop-filter: blur(calc(var(--SmartThemeBlurStrength)));
+  -webkit-backdrop-filter: blur(calc(var(--SmartThemeBlurStrength)));
+}
+
 .stmb-help-drawer > summary {
-  padding: 6px 10px;
+  padding: 6px 15px 6px 6px;
   cursor: pointer;
+  font-size: 12px;
   font-weight: 600;
 }
 
 .stmb-help-drawer > summary i {
-  margin-right: 5px;
+  margin-right: 2px;
+  margin-left: 2px;
+  font-size: 10px;
+  transform: translateY(-1px);
   color: var(--SmartThemeQuoteColor);
 }
 
@@ -304,8 +327,8 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  padding: 4px 10px 10px 30px;
+  gap: 8px;
+  padding: 4px 30px 10px 30px;
 }
 
 .stmb-help-drawer-copy {
@@ -313,6 +336,7 @@
   min-width: 0;
   overflow-wrap: normal;
   word-break: normal;
+  font-size: 10px;
 }
 
 p.stmb-help-drawer-copy {
@@ -330,6 +354,7 @@ p.stmb-help-drawer-copy {
 .stmb-help-languages {
   width: 100%;
   flex-shrink: 0;
+  font-size: 10px;
 }
 
 .stmb-help-languages a {
@@ -347,19 +372,30 @@ p.stmb-help-drawer-copy {
   }
 }
 
+.info-block.warning {
+  border-color: var(--warning-color, #e8a97f);
+  background-color: rgba(241, 198, 163, 0.2);
+  font-weight: unset;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
 .stmb-section-title {
   display: block;
   width: 100%;
   box-sizing: border-box;
   margin: 15px 0 6px;
-  padding: 3px 8px;
+  padding: 0;
   background-color: var(--SmartThemeChatTintColor);
+  font-size: 15px !important;
+  text-align: center;
 }
 
 .stmb-box {
-  border: var(--SmartThemeBorderColor) 1px solid;
+  border: 1px solid var(--SmartThemeBorderColor);
   border-radius: 6px;
-  background-color: var(--SmartThemeChatTintColor);
+  background-color: var(--SmartThemeBotMesBlurTintColor);
+  padding-top: 5px;
 }
 
 #stmb-summary-api,
@@ -375,7 +411,8 @@ p.stmb-help-drawer-copy {
   color: var(--SmartThemeEmColor);
   background: inherit;
   border: 0;
-  font-size: smaller;
+  font-size: 13px;
+  font-family: 'Inconsolata Custom', monospace;
 }
 
 #stmb-profile-summary,
@@ -401,6 +438,17 @@ p.stmb-help-drawer-copy {
 
 #stmb-profile-summary pre {
   text-align: left !important;
+}
+
+/* Font size for profile, extra function, and prompt manager buttons */
+#stmb-profile-buttons div,
+#stmb-extra-function-buttons div,
+#stmb-prompt-manager-buttons div {
+    font-size: 12px;
+}
+
+#stmb-extra-function-buttons {
+    margin-bottom: 25px;
 }
 
 /* --- PROCESSING STATE STYLING --- */
