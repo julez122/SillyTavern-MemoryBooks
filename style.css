@@ -551,7 +551,17 @@ p.stmb-help-drawer-copy {
   flex-wrap: wrap !important;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 0px;
+  border-top: 1px solid var(--SmartThemeShadowColor);
+  padding-top: 5px;
+  margin-top: 0 !important;
+}
+
+/* Remove the default margin to remove the empty space above the popup controls */
+dialog.stmb-popup 
+  > div.popup-body 
+  > div.popup-content {
+    margin: 0;
 }
 
 .popup.stmb-popup .popup-controls .menu_button {
@@ -909,4 +919,10 @@ p.stmb-help-drawer-copy {
 #stmb-profile-chat-completion-service-container {
     margin-top: 5px;
     margin-bottom: 15px;
+}
+
+small.opacity50p {
+    font-size: 10px;
+    display: block;
+    margin-bottom: 5px;
 }

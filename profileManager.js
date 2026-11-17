@@ -158,7 +158,7 @@ const profileEditTemplate = Handlebars.compile(`
         </div>
 
         <div class="info-block hint marginBot10" style="margin: auto; width: fit-content; border-radius: 5px; padding: 5px; margin-block: 5px; font-size: 12px;">
-            <small data-i18n="STMemoryBooks_APIProfileConfigHint" >💡 Profile Setup Hint: Configure and test connections in SillyTavern first. Custom API profiles can use the active Custom connection or bind a specific Custom connection profile above. Full Manual Configuration is only for exceptional direct-browser connections.</small>
+            <small data-i18n="STMemoryBooks_APIProfileConfigHint" style="opacity: 1;">💡 Profile Setup Hint: Configure and test connections in SillyTavern first. Custom API profiles can use the active Custom connection or bind a specific Custom connection profile above. Full Manual Configuration is only for exceptional direct-browser connections.</small>
         </div>
 
         <label class="checkbox_label marginTop5">
@@ -220,14 +220,14 @@ const profileEditTemplate = Handlebars.compile(`
     <div class="world_entry_form_control marginTop5">
         <label for="stmb-profile-preset" style="margin-top: 10px;">
             <h4 data-i18n="STMemoryBooks_Profile_MemoryMethod">Memory Creation Method:</h4>
-            <small data-i18n="STMemoryBooks_Profile_PresetSelectDesc">Choose a summary prompt. Edit or create custom prompts in the Summary Prompt Manager to see them in this list.</small>
+            <small data-i18n="STMemoryBooks_Profile_PresetSelectDesc" style="font-size: 11px; margin-bottom: 10px; display: block; margin-top: 5px; opacity: 0.5;">Choose a summary prompt. Edit or create custom prompts in the Summary Prompt Manager to see them in this list.</small>
             <select id="stmb-profile-preset" class="text_pole">
                 {{#each presetOptions}}
                 <option value="{{value}}" {{#if selected}}selected{{/if}}>{{displayName}}</option>
                 {{/each}}
             </select>
         </label>
-        <label class="checkbox_label marginTop5">
+        <label class="checkbox_label marginTop5" style="column-gap: normal;">
             <input type="checkbox" id="stmb-profile-use-group-specific-prompts" {{#if useGroupSpecificPrompts}}checked{{/if}}>
             <span data-i18n="STMemoryBooks_Profile_UseGroupSpecificPrompts">Use separate group and character prompts in group chats</span>
         </label>
@@ -256,7 +256,7 @@ const profileEditTemplate = Handlebars.compile(`
     </div>
 
     <div class="world_entry_form_control marginTop5">
-        <div class="buttons_block justifyCenter gap10px whitespacenowrap">
+        <div class="buttons_block justifyCenter gap10px whitespacenowrap" style="gap: 5px !important;">
             <div id="stmb-open-prompt-manager" class="menu_button interactable" data-i18n="STMemoryBooks_OpenPromptManager" style="font-size: 12px">🧩 Open Summary Prompt Manager</div>
             <div id="stmb-refresh-presets" class="menu_button interactable" data-i18n="STMemoryBooks_RefreshPresets" style="font-size: 12px">🔄 Refresh Presets</div>
             {{#if hasLegacyCustomPrompt}}
@@ -298,15 +298,15 @@ const profileEditTemplate = Handlebars.compile(`
     {{/if}}
 
     <hr>
-    <h4 data-i18n="STMemoryBooks_LorebookEntrySettings">Lorebook Entry Settings</h4>
+    <h4 data-i18n="STMemoryBooks_LorebookEntrySettings" style="margin-bottom: 10px;">Lorebook Entry Settings</h4>
     <div class="info-block hint marginBot10" data-i18n="STMemoryBooks_LorebookEntrySettingsDesc" style="margin: auto; width: fit-content; border-radius: 5px; padding: 5px; margin-block: 5px; font-size: 10px;">
         These settings control how the generated memory is saved into the lorebook.
     </div>
 
     <div class="world_entry_form_control marginTop5">
-        <label for="stmb-profile-const-vect">
+        <label for="stmb-profile-const-vect" style="display: block; margin-block: 5px;">
             <h4 data-i18n="STMemoryBooks_ActivationMode">Activation Mode:</h4>
-            <small data-i18n="STMemoryBooks_ActivationModeDesc">🔗 Vectorized is recommended for memories.</small>
+            <small data-i18n="STMemoryBooks_ActivationModeDesc" style="font-size: 10px; display: block; margin-block: 5px;">🔗 Vectorized is recommended for memories.</small>
             <select id="stmb-profile-const-vect" class="text_pole">
                 <option value="link" {{#if (eq constVectMode "link")}}selected{{/if}} data-i18n="STMemoryBooks_Vectorized">🔗 Vectorized (Default)</option>
                 <option value="blue" {{#if (eq constVectMode "blue")}}selected{{/if}} data-i18n="STMemoryBooks_Constant">🔵 Constant</option>
@@ -317,8 +317,8 @@ const profileEditTemplate = Handlebars.compile(`
 
     <div class="world_entry_form_control marginTop5">
         <label for="stmb-profile-position">
-            <h4 data-i18n="STMemoryBooks_InsertionPosition">Insertion Position:</h4>
-            <small data-i18n="STMemoryBooks_InsertionPositionDesc">↑Char is recommended. Recommendation: Never insert lower than ↑AN.</small>
+            <h4 data-i18n="STMemoryBooks_InsertionPosition" style="margin-bottom: 10px;">Insertion Position:</h4>
+            <small data-i18n="STMemoryBooks_InsertionPositionDesc" style="font-size: 10px; display: block; margin-block: 5px;">↑Char is recommended. Recommendation: Never insert lower than ↑AN.</small>
             <select id="stmb-profile-position" class="text_pole">
                 <option value="0" {{#if (eq position 0)}}selected{{/if}} data-i18n="STMemoryBooks_CharUp">↑Char</option>
                 <option value="1" {{#if (eq position 1)}}selected{{/if}} data-i18n="STMemoryBooks_CharDown">↓Char</option>
@@ -339,8 +339,8 @@ const profileEditTemplate = Handlebars.compile(`
     </div>
 
     <div class="world_entry_form_control marginTop5">
-        <h4 data-i18n="STMemoryBooks_InsertionOrder">Insertion Order:</h4>
-        <div class="buttons_block justifyCenter gap10px">
+        <h4 data-i18n="STMemoryBooks_InsertionOrder" style="margin-bottom: 10px;">Insertion Order:</h4>
+        <div class="buttons_block justifyCenter">
             <label class="checkbox_label"><input type="radio" name="order-mode" value="auto" {{#if (eq orderMode 'auto')}}checked{{/if}}> <span data-i18n="STMemoryBooks_AutoOrder">Auto (uses memory #)</span></label>
             <label class="checkbox_label"><input type="radio" name="order-mode" value="reverse" {{#if (eq orderMode 'reverse')}}checked{{/if}}> <span data-i18n="STMemoryBooks_ReverseOrder">Reverse (only use with Outlets)</span> 
                 <input type="number" id="stmb-profile-reverse-start" value="{{reverseStart}}" class="text_pole {{#unless (eq orderMode 'reverse')}}displayNone{{/unless}} width100px" min="100" max="9999" step="1" style="margin-left: auto;"></label>
@@ -350,7 +350,7 @@ const profileEditTemplate = Handlebars.compile(`
     </div>
 
     <div class="world_entry_form_control marginTop5">
-        <h4 data-i18n="STMemoryBooks_RecursionSettings">Recursion Settings:</h4>
+        <h4 data-i18n="STMemoryBooks_RecursionSettings" style="margin-bottom: 10px;">Recursion Settings:</h4>
         <div class="buttons_block justifyCenter">
             <label class="checkbox_label">
                 <input type="checkbox" id="stmb-profile-prevent-recursion" {{#if preventRecursion}}checked{{/if}}>
