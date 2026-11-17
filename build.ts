@@ -1,8 +1,3 @@
-const COPYRIGHT_BANNER = `/*
- * Copyright (C) 2024–2026 Aiko Hanasaki
- * SPDX-License-Identifier: AGPL-3.0-only
- */`;
-
 export {};
 
 const result = await Bun.build({
@@ -14,7 +9,6 @@ const result = await Bun.build({
   target: 'browser',
   format: 'esm',
   splitting: false,
-  banner: COPYRIGHT_BANNER,
 
   // Plugin to mark all parent directory imports as external
   // This ensures SillyTavern imports aren't bundled

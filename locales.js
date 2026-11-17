@@ -973,7 +973,7 @@ export const localeData_en = {
     'STMemoryBooks_Constant': '🔵 Constant',
     'STMemoryBooks_Normal': '🟢 Normal',
     'STMemoryBooks_InsertionPosition': 'Insertion Position:',
-    'STMemoryBooks_InsertionPositionDesc': '↑Char is recommended. Aiko recommends memories never go lower than ↑AN.',
+    'STMemoryBooks_InsertionPositionDesc': '↑Char is recommended. Recommendation: Never insert lower than ↑AN.',
     'STMemoryBooks_ConsolidateArcs_InsertionPositionDesc': 'Choose where consolidated summaries should be inserted in the lorebook.',
     'STMemoryBooks_CharUp': '↑Char',
     'STMemoryBooks_CharDown': '↓Char',

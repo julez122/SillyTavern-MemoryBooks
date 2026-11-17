@@ -46,6 +46,4 @@ Download the [Memory Books AI Reference Manual](userguides/1%20Memory_Books_AI_R
 
 SillyTavern Memory Books is Copyright © 2024–2026 Aiko Hanasaki.
 
-The original code in this repository is licensed under the GNU Affero General Public License v3.0. Modified versions and forks must preserve applicable copyright and license notices, identify their modifications, and comply with the AGPL's source-availability requirements. 
-
 See [LICENSE](./LICENSE).

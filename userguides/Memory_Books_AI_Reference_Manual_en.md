@@ -2512,8 +2512,6 @@ bun run install-hooks
 
 The hook builds before commit, stages build artifacts, and aborts if the build fails.
 
-Memory Books is Copyright © 2024–2026 Aiko Hanasaki and licensed under the GNU Affero General Public License v3.0. Modified versions must preserve applicable notices, identify modifications, and comply with AGPL source-availability requirements.
-
 ---
 
 ## 33. Compact Diagnostic Decision Tree

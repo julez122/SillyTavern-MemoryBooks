@@ -318,7 +318,7 @@ const profileEditTemplate = Handlebars.compile(`
     <div class="world_entry_form_control marginTop5">
         <label for="stmb-profile-position">
             <h4 data-i18n="STMemoryBooks_InsertionPosition">Insertion Position:</h4>
-            <small data-i18n="STMemoryBooks_InsertionPositionDesc">↑Char is recommended. Aiko recommends memories never go lower than ↑AN.</small>
+            <small data-i18n="STMemoryBooks_InsertionPositionDesc">↑Char is recommended. Recommendation: Never insert lower than ↑AN.</small>
             <select id="stmb-profile-position" class="text_pole">
                 <option value="0" {{#if (eq position 0)}}selected{{/if}} data-i18n="STMemoryBooks_CharUp">↑Char</option>
                 <option value="1" {{#if (eq position 1)}}selected{{/if}} data-i18n="STMemoryBooks_CharDown">↓Char</option>
