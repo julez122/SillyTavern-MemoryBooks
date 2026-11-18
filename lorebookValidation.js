@@ -116,13 +116,13 @@ async function showLorebookRecoveryPopup({
     "STMemoryBooks_MemoryLorebookMissingTitle",
   );
   const popupContent = DOMPurify.sanitize(`
-    <h4>${title}</h4>
-    <div class="world_entry_form_control">
-      <p>${getProblemText({ manualMode, lorebookName, reason })}</p>
-      <p>${getActionText({ manualMode, allowCreate, hasExistingLorebooks })}</p>
+    <h4 style="text-align: center; margin-block: 20px; font-weight: bold;">${title}</h4>
+    <div class="world_entry_form_control" style=" font-size: 12px; display: block; text-align: center;">
+      <p style="margin-bottom: 5px;">${getProblemText({ manualMode, lorebookName, reason })}</p>
+      <p style="margin-bottom: 5px;">${getActionText({ manualMode, allowCreate, hasExistingLorebooks })}</p>
       ${
         hasExistingLorebooks
-          ? `<p>${retryText}</p>`
+          ? `<p style="margin-bottom: 20px;">${retryText}</p>`
           : ""
       }
     </div>

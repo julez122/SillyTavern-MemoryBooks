@@ -961,7 +961,7 @@ function ensureJobsUiElements() {
         drawer.id = JOB_DRAWER_ID;
         drawer.innerHTML = `
             <div class="stmb-jobs-panel-header">
-                <div class="stmb-jobs-drawer-title"><strong>${escapeHtml(tr('STMemoryBooks_Jobs_Title', 'Memory Books Jobs'))}</strong></div>
+                <div class="stmb-jobs-drawer-title" style="font-size: 14px; text-decoration: underline; margin-bottom: 3px !important; letter-spacing: 1px;"><strong>${escapeHtml(tr('STMemoryBooks_Jobs_Title', 'Memory Books Jobs'))}</strong></div>
                 <div id="stmb-jobs-summary" class="stmb-jobs-summary">${escapeHtml(tr('STMemoryBooks_Jobs_NoActive', 'No active jobs'))}</div>
             </div>
             <div id="stmb-jobs-actions" class="stmb-jobs-actions"></div>

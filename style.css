@@ -81,10 +81,8 @@
   border-radius: 999px;
   border: 1px solid var(--SmartThemeBorderColor);
   background-color: var(--SmartThemeBlurTintColor);
-  color: var(--SmartThemeQuoteColor);
-  box-shadow:
-    0 2px 8px var(--SmartThemeShadowColor),
-    0 0 0 1px var(--SmartThemeBorderColor);
+  color: var(--SmartThemeShadowColor);
+  box-shadow: 1px 1px 4px var(--SmartThemeShadowColor);
   cursor: pointer;
   user-select: none;
   line-height: 1;
@@ -93,7 +91,7 @@
 }
 
 .stmb_floating_clip_button i {
-  color: var(--SmartThemeQuoteColor);
+  color: var(--SmartThemeShadowColor);
   font-size: 16px;
   font-weight: 900;
   pointer-events: none;
@@ -101,6 +99,20 @@
 
 .stmb_floating_clip_button:active {
   transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  .stmb_floating_clip_button {
+    min-width: 22px;
+    min-height: 22px;
+    height: 22px;
+    width: 22px;
+  }
+
+  .stmb_floating_clip_button::before,
+  .stmb_floating_clip_button i {
+    font-size: 10px;
+  }
 }
 
 .mes.stmb_memory_boundary_target {
@@ -144,15 +156,24 @@
   padding: 0;
   border-radius: 999px;
   border: 1px solid var(--SmartThemeBorderColor);
-  background-color: var(--SmartThemeBlurTintColor);
-  color: var(--SmartThemeQuoteColor);
-  box-shadow:
-    0 2px 8px var(--SmartThemeShadowColor),
-    0 0 0 1px var(--SmartThemeBorderColor);
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--SmartThemeShadowColor);
+  box-shadow: 0px 0px 4px 0px var(--SmartThemeShadowColor);
   cursor: grab;
-  opacity: 0.82;
+  opacity: 0.5;
   transition: opacity var(--animation-duration-2x) ease-in-out;
   user-select: none;
+}
+
+@media (max-width: 768px) {
+  .stmb_memory_boundary_button {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  .stmb_memory_boundary_button i {
+    font-size: 10px !important;
+  }
 }
 
 .stmb_memory_boundary_button:hover {
@@ -166,7 +187,7 @@
 }
 
 .stmb_memory_boundary_button i {
-  color: var(--SmartThemeQuoteColor);
+  color: var(--SmartThemeShadowColor);
   font-size: 16px;
   font-weight: 900;
   pointer-events: none;
@@ -413,7 +434,7 @@ p.stmb-help-drawer-copy {
   background: inherit;
   border: 0;
   font-size: 13px;
-  font-family: 'Inconsolata Custom', monospace;
+  font-family: "Inconsolata Custom", monospace;
 }
 
 #stmb-profile-summary,
@@ -445,11 +466,11 @@ p.stmb-help-drawer-copy {
 #stmb-profile-buttons div,
 #stmb-extra-function-buttons div,
 #stmb-prompt-manager-buttons div {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 #stmb-extra-function-buttons {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 /* --- PROCESSING STATE STYLING --- */
@@ -558,10 +579,8 @@ p.stmb-help-drawer-copy {
 }
 
 /* Remove the default margin to remove the empty space above the popup controls */
-dialog.stmb-popup 
-  > div.popup-body 
-  > div.popup-content {
-    margin: 0;
+dialog.stmb-popup > div.popup-body > div.popup-content {
+  margin: 0;
 }
 
 .popup.stmb-popup .popup-controls .menu_button {
@@ -697,7 +716,7 @@ dialog.stmb-popup
   gap: 8px;
   padding: 12px;
   border: 1px solid var(--SmartThemeBorderColor);
-  background-color: var(--SmartThemeBlurTintColor);
+  background-color: rgba(22, 22, 22, 0.3);
   backdrop-filter: blur(var(--SmartThemeBlurStrength));
   -webkit-backdrop-filter: blur(var(--SmartThemeBlurStrength));
   font-size: calc(var(--mainFontSize) * 0.9);
@@ -748,7 +767,10 @@ dialog.stmb-popup
   flex-direction: column;
 }
 
-.stmb-jobs-summary,
+.stmb-jobs-summary {
+  font-size: 10px;
+}
+
 .stmb-jobs-row-status,
 .stmb-jobs-row-meta,
 .stmb-jobs-row-detail,
@@ -786,7 +808,7 @@ dialog.stmb-popup
   padding: 10px;
   border-radius: 8px;
   border: 1px solid transparent;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(22, 22, 22, 0.3);
 }
 
 .stmb-jobs-row-actions {
@@ -820,7 +842,7 @@ dialog.stmb-popup
 
 .stmb-jobs-row[data-action="open-approval"]:hover,
 .stmb-jobs-row[data-action="open-approval"]:focus-visible {
-  background: color-mix(in srgb, currentColor 10%, rgba(255, 255, 255, 0.03));
+  background: color-mix(in srgb, currentColor 10%, rgba(22, 22, 22, 0.3));
 }
 
 .stmb-jobs-action-link {
@@ -917,12 +939,12 @@ dialog.stmb-popup
 }
 
 #stmb-profile-chat-completion-service-container {
-    margin-top: 5px;
-    margin-bottom: 15px;
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 
 small.opacity50p {
-    font-size: 10px;
-    display: block;
-    margin-bottom: 5px;
+  font-size: 10px;
+  display: block;
+  margin-bottom: 5px;
 }

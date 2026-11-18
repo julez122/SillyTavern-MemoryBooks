@@ -279,7 +279,7 @@ export const generalSettingsTemplate = Handlebars.compile(`
         <h4 class="stmb-section-title" data-i18n="STMemoryBooks_GroupChatSettings">Group Chat</h4>
         <label class="checkbox_label" title="Filter group-chat memories to participating characters. When unchecked, use ordinary single-book processing without character filters, participant selection, character copies, or separate group/character prompts. Existing entries keep their filters until rewritten." data-i18n="[title]STMemoryBooks_CharacterAwareMemoriesTooltip">
             <input type="checkbox" id="stmb-character-aware-memories" {{#if characterAwareMemories}}checked{{/if}}>
-            <span data-i18n="STMemoryBooks_CharacterAwareMemories">character-aware memories</span>
+            <span data-i18n="STMemoryBooks_CharacterAwareMemories">Character-aware memories</span>
         </label>
         <label class="checkbox_label" title="Use the group side-prompt default for automatic runs. When unchecked, inherit the solo default. Explicit per-chat selections still apply. Independent of character-aware memories." data-i18n="[title]STMemoryBooks_SeparateGroupSidePromptsTooltip">
             <input type="checkbox" id="stmb-use-separate-group-side-prompts" {{#if useSeparateGroupSidePrompts}}checked{{/if}}>
