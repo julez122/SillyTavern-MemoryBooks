@@ -1,3 +1,9 @@
+:root {
+  --boundary-divider: rgb(132 214 162); /* Color for memory boundary divider */
+  --valid-point: #8de2cb; /* Color for valid selection points of the message action buttons */
+}
+
+
 /* --- CORE BUTTON STYLES --- */
 
 /* Base styling for all scene marker buttons */
@@ -40,9 +46,9 @@
 /* --- VALID SELECTION POINTS --- */
 .mes_stmb_start.valid-start-point,
 .mes_stmb_end.valid-end-point {
-  background-color: #8de2cb;
+  background-color: var(--valid-point);
   color: var(--color-black);
-  border-color: #8de2cb;
+  border-color: var(--valid-point);
   filter: grayscale(0);
   animation: stmb-pulse 2s infinite;
 }
@@ -121,28 +127,31 @@
 
 .stmb_memory_boundary_divider {
   position: absolute;
-  top: 8px;
-  left: 12px;
-  right: 12px;
+  top: -14px;
+  left: 5px;
+  right: 5px;
   z-index: 5;
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--SmartThemeQuoteColor);
-  font-size: calc(var(--mainFontSize) * 0.78);
-  font-weight: 600;
+  color: var(--boundary-divider);
+  font-size: calc(var(--mainFontSize) * 0.79);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   line-height: 1;
-  opacity: 0.9;
+  opacity: 0.8;
   pointer-events: none;
   white-space: nowrap;
+  animation: stmb-pulse 2s infinite;
 }
 
 .stmb_memory_boundary_divider::before,
 .stmb_memory_boundary_divider::after {
   content: "";
   flex: 1 1 auto;
-  border-top: 2px dashed var(--SmartThemeQuoteColor);
-  opacity: 0.85;
+  border-top: 2px dashed var(--boundary-divider);
+  opacity: 0.8;
 }
 
 .stmb_memory_boundary_button {
@@ -713,13 +722,16 @@ dialog.stmb-popup > div.popup-body > div.popup-content {
   display: none;
   flex-direction: column;
   align-items: stretch;
-  gap: 8px;
+  gap: 4px;
   padding: 12px;
-  border: 1px solid var(--SmartThemeBorderColor);
+  border: 1.5px solid var(--SmartThemeBorderColor);
   background-color: rgba(22, 22, 22, 0.3);
   backdrop-filter: blur(var(--SmartThemeBlurStrength));
   -webkit-backdrop-filter: blur(var(--SmartThemeBlurStrength));
   font-size: calc(var(--mainFontSize) * 0.9);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-color: transparent;
 }
 
 #top_chat_stmb_jobs.visible {
@@ -738,15 +750,14 @@ dialog.stmb-popup > div.popup-body > div.popup-content {
   position: absolute;
   top: -4px;
   right: -4px;
-  min-width: 18px;
-  height: 18px;
-  padding: 0 5px;
+  min-width: 10px;
+  height: 10px;
   border-radius: 999px;
   align-items: center;
   justify-content: center;
   background: var(--SmartThemeQuoteColor, #4f8cff);
-  color: var(--SmartThemeBodyColor, #fff);
-  font-size: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 5px;
   font-weight: 700;
   line-height: 1;
 }
@@ -790,6 +801,7 @@ dialog.stmb-popup > div.popup-body > div.popup-content {
   gap: 8px;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .stmb-jobs-rows {
@@ -815,13 +827,27 @@ dialog.stmb-popup > div.popup-body > div.popup-content {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
-  align-items: center;
-  gap: 6px;
+  align-items: baseline;
+  gap: 4px;
+}
+
+button.menu_button.stmb-jobs-row-action.interactable {
+    font-size: 11px;
+    min-height: 21px;
+    height: 21px;
+    align-self: baseline;
+}
+
+.stmb-jobs-empty {
+    opacity: 0.6;
+    font-style: italic;
 }
 
 .stmb-jobs-row-header {
   align-items: center;
   gap: 8px;
+  margin-bottom: 5px;
+  font-size: 14px;
 }
 
 .stmb-jobs-row-icon {
@@ -832,8 +858,32 @@ dialog.stmb-popup > div.popup-body > div.popup-content {
   display: inline-block;
 }
 
+.stmb-jobs-row-status {
+  font-size: 12px;
+  border: 1px solid currentColor;
+  padding: 2px 8px;
+  background-color: color-mix(
+    in srgb,
+    currentColor 15%,
+    transparent
+    );
+}
+
+.stmb-jobs-row-main strong {
+  text-decoration: underline;
+  text-underline-offset: 1.5px;
+}
+
+.stmb-jobs-row-detail {
+  margin-bottom: 5px;
+}
+
 .stmb-jobs-row-error {
   color: var(--SmartThemeRedColor, #ff6b6b);
+  font-size: 9px;
+  text-align: start;
+  margin-top: 5px;
+  font-style: italic;
 }
 
 .stmb-jobs-row[data-action="open-approval"] {
@@ -846,9 +896,13 @@ dialog.stmb-popup > div.popup-body > div.popup-content {
 }
 
 .stmb-jobs-action-link {
-  width: auto;
+  width: fit-content;
   max-width: none;
   white-space: nowrap;
+  font-size: 10px;
+  padding: 5px;
+  min-height: 20px;
+  height: 20px;
 }
 
 .stmb-jobs-tone-running {

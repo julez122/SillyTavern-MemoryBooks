@@ -829,9 +829,9 @@ function renderStmbJobsUi() {
                         <span class="stmb-jobs-row-status">${escapeHtml(getJobStateLabel(job))}</span>
                     </div>
                     ${job.detail ? `<div class="stmb-jobs-row-detail">${escapeHtml(job.detail)}</div>` : ''}
-                    ${job.lorebookName ? `<div class="stmb-jobs-row-meta">${escapeHtml(tr('STMemoryBooks_Jobs_Lorebook', 'Lorebook'))}: ${escapeHtml(job.lorebookName)}</div>` : ''}
-                    ${messageRange ? `<div class="stmb-jobs-row-meta">${escapeHtml(messageRange)}</div>` : ''}
-                    ${formatElapsed(job) ? `<div class="stmb-jobs-row-meta">${escapeHtml(formatElapsed(job))}</div>` : ''}
+                    ${job.lorebookName ? `<div class="stmb-jobs-row-meta" style="font-size: 10.5px; font-weight: bold;">${escapeHtml(tr('STMemoryBooks_Jobs_Lorebook', 'Lorebook'))}: ${escapeHtml(job.lorebookName)}</div>` : ''}
+                    ${messageRange ? `<div class="stmb-jobs-row-meta" style="font-size: 10px;margin-top: 5px; font-style: italic; text-align: center;">${escapeHtml(messageRange)}</div>` : ''}
+                    ${formatElapsed(job) ? `<div class="stmb-jobs-row-meta" style="text-align: end; font-size: 9px; font-weight: bold;">${escapeHtml(formatElapsed(job))}</div>` : ''}
                     ${job.error?.message ? `<div class="stmb-jobs-row-error">${escapeHtml(job.error.message)}</div>` : ''}
                 </div>
                 ${action ? `<div class="stmb-jobs-row-actions">${action}</div>` : ''}
